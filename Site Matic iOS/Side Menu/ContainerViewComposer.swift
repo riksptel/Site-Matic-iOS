@@ -12,17 +12,17 @@ final class ContainerViewComposer {
 //        let settingsViewController = SettingsViewController()
 //        let aboutViewController = AboutViewController()
 //        let myAccountViewController = MyAccountViewController()
-        let sideMenuItems = [
-            SideMenuItem(icon: UIImage(systemName: "house.fill"),
-                         name: "Home"),
-            SideMenuItem(icon: UIImage(systemName: "gear"),
-                         name: "Settings"),
-            SideMenuItem(icon: UIImage(systemName: "info.circle"),
-                         name: "About"),
-            SideMenuItem(icon: UIImage(systemName: "person"),
-                         name: "My Account")
-        ]
-        let sideMenuViewController = SideMenuViewController(sideMenuItems: sideMenuItems)
+//        let sideMenuItems = [
+//            SideMenuItem(icon: UIImage(systemName: "house.fill"),
+//                         name: "Home"),
+//            SideMenuItem(icon: UIImage(systemName: "gear"),
+//                         name: "Settings"),
+//            SideMenuItem(icon: UIImage(systemName: "info.circle"),
+//                         name: "About"),
+//            SideMenuItem(icon: UIImage(systemName: "person"),
+//                         name: "My Account")
+//        ]
+        let sideMenuViewController = SideMenuViewController()
         let container = ContainerViewController(sideMenuViewController: sideMenuViewController,
                                                 rootViewController: homeViewController)
 

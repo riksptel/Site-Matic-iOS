@@ -3,10 +3,11 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 56;
+	objectVersion = 54;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8350D4CA8591519EEFC048D8 /* Pods_Site_Matic_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B2A96AB0B14B0D7EDC51C3F1 /* Pods_Site_Matic_iOS.framework */; };
 		F519D634299CB469004EF2AA /* SideMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F519D633299CB469004EF2AA /* SideMenuViewController.swift */; };
 		F519D636299CB480004EF2AA /* SideMenuDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F519D635299CB480004EF2AA /* SideMenuDelegate.swift */; };
 		F519D638299CB49D004EF2AA /* SideMenuItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = F519D637299CB49D004EF2AA /* SideMenuItem.swift */; };
@@ -18,6 +19,8 @@
 		F532BEF12998CA850071A1EF /* VehicleDetailsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F532BEF02998CA850071A1EF /* VehicleDetailsCell.swift */; };
 		F558A20C29975BFC002982D1 /* SiteOverviewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F558A20B29975BFB002982D1 /* SiteOverviewController.swift */; };
 		F5794229299A17B300F3CCB1 /* DemoController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5794228299A17B300F3CCB1 /* DemoController.swift */; };
+		F5833C2629A537AE004B18C3 /* DashboardController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5833C2529A537AE004B18C3 /* DashboardController.swift */; };
+		F5833C2829A53B45004B18C3 /* ChartsViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5833C2729A53B45004B18C3 /* ChartsViewCell.swift */; };
 		F5B022EF2996447900150534 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5B022EE2996447900150534 /* AppDelegate.swift */; };
 		F5B022F12996447900150534 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5B022F02996447900150534 /* SceneDelegate.swift */; };
 		F5B022F32996447900150534 /* LoginController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5B022F22996447900150534 /* LoginController.swift */; };
@@ -28,6 +31,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		16E3D956393C37BD4D06BDE1 /* Pods-Site Matic iOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Site Matic iOS.release.xcconfig"; path = "Target Support Files/Pods-Site Matic iOS/Pods-Site Matic iOS.release.xcconfig"; sourceTree = "<group>"; };
+		B2A96AB0B14B0D7EDC51C3F1 /* Pods_Site_Matic_iOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Site_Matic_iOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C55964BB2F12675B5F8185C7 /* Pods-Site Matic iOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Site Matic iOS.debug.xcconfig"; path = "Target Support Files/Pods-Site Matic iOS/Pods-Site Matic iOS.debug.xcconfig"; sourceTree = "<group>"; };
 		F519D633299CB469004EF2AA /* SideMenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideMenuViewController.swift; sourceTree = "<group>"; };
 		F519D635299CB480004EF2AA /* SideMenuDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideMenuDelegate.swift; sourceTree = "<group>"; };
 		F519D637299CB49D004EF2AA /* SideMenuItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideMenuItem.swift; sourceTree = "<group>"; };
@@ -39,6 +45,8 @@
 		F532BEF02998CA850071A1EF /* VehicleDetailsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VehicleDetailsCell.swift; sourceTree = "<group>"; };
 		F558A20B29975BFB002982D1 /* SiteOverviewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SiteOverviewController.swift; sourceTree = "<group>"; };
 		F5794228299A17B300F3CCB1 /* DemoController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DemoController.swift; sourceTree = "<group>"; };
+		F5833C2529A537AE004B18C3 /* DashboardController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardController.swift; sourceTree = "<group>"; };
+		F5833C2729A53B45004B18C3 /* ChartsViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartsViewCell.swift; sourceTree = "<group>"; };
 		F5B022EB2996447900150534 /* Site Matic iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Site Matic iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F5B022EE2996447900150534 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F5B022F02996447900150534 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -55,12 +63,31 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8350D4CA8591519EEFC048D8 /* Pods_Site_Matic_iOS.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		8C17553CD16E75495AAA0796 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				C55964BB2F12675B5F8185C7 /* Pods-Site Matic iOS.debug.xcconfig */,
+				16E3D956393C37BD4D06BDE1 /* Pods-Site Matic iOS.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		B95E47AABA0B869046C43BEA /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				B2A96AB0B14B0D7EDC51C3F1 /* Pods_Site_Matic_iOS.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		F519D632299CB3D3004EF2AA /* Side Menu */ = {
 			isa = PBXGroup;
 			children = (
@@ -105,6 +132,8 @@
 			children = (
 				F5B022ED2996447900150534 /* Site Matic iOS */,
 				F5B022EC2996447900150534 /* Products */,
+				8C17553CD16E75495AAA0796 /* Pods */,
+				B95E47AABA0B869046C43BEA /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -121,12 +150,14 @@
 			children = (
 				F519D632299CB3D3004EF2AA /* Side Menu */,
 				F5B022EE2996447900150534 /* AppDelegate.swift */,
+				F5833C2529A537AE004B18C3 /* DashboardController.swift */,
 				F5B022F02996447900150534 /* SceneDelegate.swift */,
 				F5B022F22996447900150534 /* LoginController.swift */,
 				F558A20B29975BFB002982D1 /* SiteOverviewController.swift */,
 				F5794228299A17B300F3CCB1 /* DemoController.swift */,
 				F5DDFB092998BA30009883C0 /* VehicleAlertsController.swift */,
 				F532BEF02998CA850071A1EF /* VehicleDetailsCell.swift */,
+				F5833C2729A53B45004B18C3 /* ChartsViewCell.swift */,
 				F5E1D77C299658D3003E72BA /* Extensions.swift */,
 				F5B022F72996447B00150534 /* Assets.xcassets */,
 				F5B022F92996447B00150534 /* LaunchScreen.storyboard */,
@@ -142,9 +173,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = F5B022FF2996447B00150534 /* Build configuration list for PBXNativeTarget "Site Matic iOS" */;
 			buildPhases = (
+				AFD211D0E3CF0CAFC992CBD7 /* [CP] Check Pods Manifest.lock */,
 				F5B022E72996447900150534 /* Sources */,
 				F5B022E82996447900150534 /* Frameworks */,
 				F5B022E92996447900150534 /* Resources */,
+				77B4557A93A1284FAEC37196 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -171,7 +204,7 @@
 				};
 			};
 			buildConfigurationList = F5B022E62996447900150534 /* Build configuration list for PBXProject "Site Matic iOS" */;
-			compatibilityVersion = "Xcode 14.0";
+			compatibilityVersion = "Xcode 12.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
@@ -200,6 +233,48 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		77B4557A93A1284FAEC37196 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Site Matic iOS/Pods-Site Matic iOS-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Site Matic iOS/Pods-Site Matic iOS-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Site Matic iOS/Pods-Site Matic iOS-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		AFD211D0E3CF0CAFC992CBD7 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Site Matic iOS-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		F5B022E72996447900150534 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -214,10 +289,12 @@
 				F5B022EF2996447900150534 /* AppDelegate.swift in Sources */,
 				F5B022F12996447900150534 /* SceneDelegate.swift in Sources */,
 				F5DDFB0A2998BA31009883C0 /* VehicleAlertsController.swift in Sources */,
+				F5833C2829A53B45004B18C3 /* ChartsViewCell.swift in Sources */,
 				F519D641299CB51F004EF2AA /* ContainerViewController.swift in Sources */,
 				F5E1D77D299658D3003E72BA /* Extensions.swift in Sources */,
 				F5794229299A17B300F3CCB1 /* DemoController.swift in Sources */,
 				F519D634299CB469004EF2AA /* SideMenuViewController.swift in Sources */,
+				F5833C2629A537AE004B18C3 /* DashboardController.swift in Sources */,
 				F519D63F299CB4F5004EF2AA /* ContainerViewControllerPresentation.swift in Sources */,
 				F558A20C29975BFC002982D1 /* SiteOverviewController.swift in Sources */,
 				F519D636299CB480004EF2AA /* SideMenuDelegate.swift in Sources */,
@@ -354,6 +431,7 @@
 		};
 		F5B023002996447B00150534 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C55964BB2F12675B5F8185C7 /* Pods-Site Matic iOS.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -383,6 +461,7 @@
 		};
 		F5B023012996447B00150534 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 16E3D956393C37BD4D06BDE1 /* Pods-Site Matic iOS.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;

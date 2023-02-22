@@ -9,28 +9,72 @@ import UIKit
 
 final class SideMenuViewController: UIViewController {
     
-//    let userIcon: UIImageView!
-//    let employeeNameLabel: UILabel!
-//    let employeeEmailLabel: UILabel!
-//    let employeeDepartmentLabel: UILabel!
-    
 
-    private var headerView: UIView = {
-        let view = UIView()
-        view.translatesAutoresizingMaskIntoConstraints = false
+    private let employeeNameLabel: UILabel = {
+        let label = UILabel()
+        label.text = "Employee Name"
+        label.textColor = .white
+        label.font = UIFont.systemFont(ofSize: 15)
+        return label
+    }()
+    
+    private let employeeEmailLabel: UILabel = {
+        let label = UILabel()
+        label.text = "xyz@gmail.com"
+        label.textColor = .white
+        label.font = UIFont.systemFont(ofSize: 10)
+        return label
+    }()
+    
+    private let employeeDepartmentLabel: UILabel = {
+        let label = UILabel()
+        label.text = "Department"
+        label.textColor = .white
+        label.font = UIFont.systemFont(ofSize: 10)
+        return label
+    }()
+    
+    
+    private let userIcon: UIImageView = {
         let userIcon = UIImageView()
         userIcon.clipsToBounds = true
-        userIcon.setDimensions(width: 40, height: 40)
-        userIcon.layer.cornerRadius = 20
+        userIcon.setDimensions(width: 50, height: 50)
+        userIcon.layer.cornerRadius = 25
+        userIcon.backgroundColor = .red
         userIcon.contentMode = .scaleAspectFit
-        view.backgroundColor = .white
-        return view
+        return userIcon
     }()
 
-    private var tableView: UITableView = {
+    private lazy var headerView: UIView = {
+        let view = UIView()
+        view.translatesAutoresizingMaskIntoConstraints = false
+        view.addSubview(userIcon)
+        userIcon.anchor(left: view.leftAnchor, bottom: view.bottomAnchor, paddingLeft: 15, paddingBottom: 15)
+        view.backgroundColor = UIColor.rgb(red: 20, green: 20, blue: 20)
+        
+        let stackView = UIStackView(arrangedSubviews: [employeeNameLabel, employeeEmailLabel, employeeDepartmentLabel])
+        stackView.axis = .vertical
+        view.addSubview(stackView)
+        stackView.anchor(left: userIcon.rightAnchor, bottom: view.bottomAnchor, right: view.rightAnchor, paddingLeft: 15, paddingBottom: 15, paddingRight: 15, height: 50)
+        
+        return view
+    }()
+    
+    private let logoutButton: UIButton = {
+        let button = UIButton(type: .system)
+        button.backgroundColor = .red
+        button.titleLabel?.font = UIFont.systemFont(ofSize: 22.5)
+        button.setTitle("Logout", for: .normal)
+        button.setTitleColor(.white, for: .normal)
+
+        return button
+    }()
+
+    private lazy var tableView: UITableView = {
         let tableView = UITableView()
         tableView.translatesAutoresizingMaskIntoConstraints = false
         tableView.tableFooterView = UIView()
+        tableView.rowHeight = 60
         return tableView
     }()
 
@@ -46,13 +90,9 @@ final class SideMenuViewController: UIViewController {
 
     private var leadingConstraint: NSLayoutConstraint!
     private var shadowColor: UIColor = UIColor(red: 33/255, green: 33/255, blue: 33/255, alpha: 0.5)
-    private var sideMenuItems: [SideMenuItem] = []
+    private var sideMenuItems: [SideMenuItem] = [SideMenuItem(name: "Home"), SideMenuItem(name: "Site Overview"), SideMenuItem(name: "DMS"), SideMenuItem(name: "Reports"), SideMenuItem(name: "My Locations"), SideMenuItem(name: "Preventive maintenance"), SideMenuItem(name: "Chart Permission"), SideMenuItem(name: "Administrations")]
+    
     weak var delegate: SideMenuDelegate?
-
-    convenience init(sideMenuItems: [SideMenuItem]) {
-        self.init(sideMenuItems: sideMenuItems)
-        self.sideMenuItems = sideMenuItems
-    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -62,7 +102,6 @@ final class SideMenuViewController: UIViewController {
     private func configureView() {
         view.backgroundColor = .clear
         view.frame.origin.x = -screenWidth
-
         addSubviews()
         configureTableView()
         configureTapGesture()
@@ -71,6 +110,7 @@ final class SideMenuViewController: UIViewController {
     private func addSubviews() {
         view.addSubview(sideMenuView)
         sideMenuView.addSubview(headerView)
+        view.addSubview(logoutButton)
         sideMenuView.addSubview(tableView)
         configureConstraints()
     }
@@ -87,16 +127,19 @@ final class SideMenuViewController: UIViewController {
         headerView.topAnchor.constraint(equalTo: sideMenuView.topAnchor).isActive = true
         headerView.leadingAnchor.constraint(equalTo: sideMenuView.leadingAnchor).isActive = true
         headerView.trailingAnchor.constraint(equalTo: sideMenuView.trailingAnchor).isActive = true
-        headerView.heightAnchor.constraint(equalToConstant: 150).isActive = true
+        headerView.heightAnchor.constraint(equalToConstant: 120).isActive = true
+        
+       
+        logoutButton.anchor(left: sideMenuView.leftAnchor, bottom: sideMenuView.bottomAnchor, right: sideMenuView.rightAnchor, height: 60)
 
         tableView.topAnchor.constraint(equalTo: headerView.bottomAnchor).isActive = true
         tableView.leadingAnchor.constraint(equalTo: sideMenuView.leadingAnchor).isActive = true
         tableView.trailingAnchor.constraint(equalTo: sideMenuView.trailingAnchor).isActive = true
-        tableView.bottomAnchor.constraint(equalTo: sideMenuView.bottomAnchor).isActive = true
+        tableView.bottomAnchor.constraint(equalTo: logoutButton.topAnchor).isActive = true
     }
 
     private func configureTableView() {
-        tableView.backgroundColor = .lightGray
+        tableView.backgroundColor = UIColor.rgb(red: 39, green: 39, blue: 39)
         tableView.register(SideMenuItemCell.self, forCellReuseIdentifier: SideMenuItemCell.identifier)
         tableView.dataSource = self
         tableView.delegate = self
@@ -154,7 +197,7 @@ extension SideMenuViewController: UITableViewDataSource, UITableViewDelegate {
             fatalError("Could not dequeue cell")
         }
         let item = sideMenuItems[indexPath.row]
-        cell.configureCell(icon: item.icon, text: item.name)
+        cell.configureCell(icon: nil, text: item.name)
         return cell
     }
 

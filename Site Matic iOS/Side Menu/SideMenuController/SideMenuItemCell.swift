@@ -8,19 +8,23 @@
 import UIKit
 
 final class SideMenuItemCell: UITableViewCell {
+    
     static var identifier: String {
         String(describing: self)
     }
 
     private var itemIcon: UIImageView = {
         let imageView = UIImageView()
+        imageView.backgroundColor = .red
         imageView.translatesAutoresizingMaskIntoConstraints = false
+        imageView.layer.cornerRadius = 25 / 2
         return imageView
     }()
 
     private var itemLabel: UILabel = {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
+        label.font = UIFont.systemFont(ofSize: 10)
         return label
     }()
 
@@ -35,7 +39,7 @@ final class SideMenuItemCell: UITableViewCell {
     }
 
     private func configureView() {
-        contentView.backgroundColor = .lightGray
+        contentView.backgroundColor = UIColor.rgb(red: 39, green: 39, blue: 39)
         contentView.addSubview(itemIcon)
         contentView.addSubview(itemLabel)
     }

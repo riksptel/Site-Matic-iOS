@@ -8,6 +8,7 @@
 import UIKit
 
 class ContentViewController: UIViewController {
+    
     weak var delegate: SideMenuDelegate?
     var barButtonImage: UIImage? = UIImage(systemName: "line.horizontal.3")
     var grayView: UIView!
@@ -146,7 +147,7 @@ class ContentViewController: UIViewController {
     //View lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = .black
+        view.backgroundColor = .green
         setupNavigationBar()
         setupUI()
         configureView()
