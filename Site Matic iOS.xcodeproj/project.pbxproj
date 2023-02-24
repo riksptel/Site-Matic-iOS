@@ -26,6 +26,7 @@
 		F5B022F32996447900150534 /* LoginController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5B022F22996447900150534 /* LoginController.swift */; };
 		F5B022F82996447B00150534 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F5B022F72996447B00150534 /* Assets.xcassets */; };
 		F5B022FB2996447B00150534 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F5B022F92996447B00150534 /* LaunchScreen.storyboard */; };
+		F5BF522D29A722C90021B059 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5BF522C29A722C90021B059 /* ProfileViewController.swift */; };
 		F5DDFB0A2998BA31009883C0 /* VehicleAlertsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5DDFB092998BA30009883C0 /* VehicleAlertsController.swift */; };
 		F5E1D77D299658D3003E72BA /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5E1D77C299658D3003E72BA /* Extensions.swift */; };
 /* End PBXBuildFile section */
@@ -54,6 +55,7 @@
 		F5B022F72996447B00150534 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F5B022FA2996447B00150534 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F5B022FC2996447B00150534 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F5BF522C29A722C90021B059 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		F5DDFB092998BA30009883C0 /* VehicleAlertsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VehicleAlertsController.swift; sourceTree = "<group>"; };
 		F5E1D77C299658D3003E72BA /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -76,7 +78,6 @@
 				C55964BB2F12675B5F8185C7 /* Pods-Site Matic iOS.debug.xcconfig */,
 				16E3D956393C37BD4D06BDE1 /* Pods-Site Matic iOS.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -151,6 +152,7 @@
 				F519D632299CB3D3004EF2AA /* Side Menu */,
 				F5B022EE2996447900150534 /* AppDelegate.swift */,
 				F5833C2529A537AE004B18C3 /* DashboardController.swift */,
+				F5BF522C29A722C90021B059 /* ProfileViewController.swift */,
 				F5B022F02996447900150534 /* SceneDelegate.swift */,
 				F5B022F22996447900150534 /* LoginController.swift */,
 				F558A20B29975BFB002982D1 /* SiteOverviewController.swift */,
@@ -290,6 +292,7 @@
 				F5B022F12996447900150534 /* SceneDelegate.swift in Sources */,
 				F5DDFB0A2998BA31009883C0 /* VehicleAlertsController.swift in Sources */,
 				F5833C2829A53B45004B18C3 /* ChartsViewCell.swift in Sources */,
+				F5BF522D29A722C90021B059 /* ProfileViewController.swift in Sources */,
 				F519D641299CB51F004EF2AA /* ContainerViewController.swift in Sources */,
 				F5E1D77D299658D3003E72BA /* Extensions.swift in Sources */,
 				F5794229299A17B300F3CCB1 /* DemoController.swift in Sources */,

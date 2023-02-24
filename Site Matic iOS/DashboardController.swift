@@ -54,10 +54,9 @@ class DashboardController: UIViewController {
     }()
     
     
-    
-    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         view.backgroundColor = .black
         setupNavigationBar()
         view.addSubview(chartsTableView)
@@ -83,7 +82,11 @@ class DashboardController: UIViewController {
     }
     
     @objc func userPressed() {
+        self.navigationController?.pushViewController(ProfileViewController(), animated: true)
         
+        
+        
+    
     }
     
     func setupNavigationBar() {
