@@ -187,37 +187,7 @@ class VehicleDetailsCell: UITableViewCell {
         
         contentView.addSubview(commentsLabel)
         commentsLabel.anchor(top: alertsMessageIcon.bottomAnchor, left: commentsIcon.rightAnchor, right: contentView.rightAnchor, paddingTop: 18, paddingLeft: 5, paddingRight: 25)
-        
-        
-        
-        
-//        let label = UILabel()
-//        label.text = "123456789101112"
-//        label.textColor = .white
-//        label.font = UIFont.systemFont(ofSize: 15)
-//
-//        contentView.addSubview(label)
-//        label.centerY(inView: contentView)
-//        label.anchor(left: iconView.rightAnchor, paddingLeft: 5)
-        
     }
 }
 
 
-extension UIImageView {
-    func createIcon(dimension: CGFloat, imageName: String) -> UIImageView {
-        let imgView = UIImageView()
-        imgView.clipsToBounds = true
-        
-        if imageName == "" {
-            imgView.backgroundColor = .red
-        } else {
-            imgView.image = UIImage(named: imageName)
-        }
-       
-        imgView.layer.cornerRadius = dimension / 2
-        imgView.setDimensions(width: dimension, height: dimension)
-        imgView.backgroundColor = .red
-        return imgView
-    }
-}

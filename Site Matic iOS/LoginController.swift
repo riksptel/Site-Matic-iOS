@@ -78,14 +78,9 @@ class LoginController: UIViewController {
     
     // MARK:- Selectors
     @objc func performAuth() {
-        //TODO:- Solve the keywindow logic
-//        let newKeywindow = UIApplication.shared.windows.first { $0.isKeyWindow }
-//        guard let vc = newKeywindow?.rootViewController as? SiteOverviewController else { return }
-
             let nav = UINavigationController(rootViewController: SiteOverviewController())
             nav.modalPresentationStyle = .fullScreen
             self.present(nav, animated: true, completion: nil)
-
     }
     
     

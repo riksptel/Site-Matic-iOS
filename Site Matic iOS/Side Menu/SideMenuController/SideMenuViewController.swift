@@ -9,7 +9,6 @@ import UIKit
 
 final class SideMenuViewController: UIViewController {
     
-
     private let employeeNameLabel: UILabel = {
         let label = UILabel()
         label.text = "Employee Name"
@@ -47,7 +46,7 @@ final class SideMenuViewController: UIViewController {
 
     private lazy var headerView: UIView = {
         let view = UIView()
-        view.translatesAutoresizingMaskIntoConstraints = false
+
         view.addSubview(userIcon)
         userIcon.anchor(left: view.leftAnchor, bottom: view.bottomAnchor, paddingLeft: 15, paddingBottom: 15)
         view.backgroundColor = UIColor.rgb(red: 20, green: 20, blue: 20)

@@ -130,6 +130,81 @@ extension UIView {
         return view
     }
     
+    func vehicleMetaDetails(imageName: String, textColor: UIColor? = .white, mainText: String, supplementText: String? = nil) -> UIView {
+        
+        let view = UIView()
+        
+        let icon = UIImageView()
+        icon.setDimensions(width: 30, height: 30)
+        icon.backgroundColor = .blue
+        icon.layer.cornerRadius = 15
+        icon.clipsToBounds = true
+        
+        let label1 = UILabel()
+        label1.text = mainText
+        label1.textColor = textColor
+        label1.font = UIFont.systemFont(ofSize: 15)
+        
+        let label2 = UILabel()
+        label2.text = supplementText
+        label2.textColor = .white
+        label2.font = UIFont.systemFont(ofSize: 10)
+        
+   
+        view.addSubview(icon)
+        icon.centerX(inView: view)
+        icon.anchor(top: view.topAnchor)
+        
+        view.addSubview(label1)
+        label1.centerX(inView: view)
+        label1.anchor(top: icon.bottomAnchor, paddingTop: 3)
+        
+        view.addSubview(label2)
+        label2.centerX(inView: view)
+        label2.anchor(top: label1.bottomAnchor, paddingTop: 3)
+        
+        return view
+        
+    }
+    
+    func createCredentialsContainerView(iconDimension: CGFloat, iconImageName: String, credentialTitle: String, credential: String) -> UIView {
+        let view = UIView()
+        view.backgroundColor = .mobaGray
+        
+        let icon = UIImageView().createIcon(dimension: iconDimension, imageName: iconImageName)
+        icon.backgroundColor = .red
+        
+        let credentialTitleLabel = UILabel()
+        credentialTitleLabel.text = credentialTitle
+        credentialTitleLabel.textColor = .gray
+        credentialTitleLabel.font = UIFont.boldSystemFont(ofSize: 15)
+        
+        let credentialLabel = UILabel()
+        credentialLabel.text = credential
+        credentialLabel.textColor = .white
+        credentialLabel.font = UIFont.boldSystemFont(ofSize: 15)
+        
+        let seperatorView = UIView()
+        seperatorView.backgroundColor = .lightGray
+        
+        view.addSubview(icon)
+        icon.centerY(inView: view)
+        icon.anchor(left: view.leftAnchor, paddingLeft: 12)
+        
+        view.addSubview(credentialTitleLabel)
+        credentialTitleLabel.anchor(top: view.topAnchor, left: icon.rightAnchor, paddingTop: 8, paddingLeft: 8)
+        
+        view.addSubview(credentialLabel)
+        credentialLabel.anchor(top: credentialTitleLabel.bottomAnchor, left: icon.rightAnchor, paddingTop: 4, paddingLeft: 8)
+        
+        view.addSubview(seperatorView)
+        seperatorView.anchor(top: credentialLabel.bottomAnchor, left: icon.rightAnchor, right: view.rightAnchor, paddingTop: 8, paddingLeft: 8, paddingRight: 25, height: 0.5)
+        
+        view.heightAnchor.constraint(equalToConstant: 65).isActive = true
+        
+        return view
+    }
+    
 }
 
 // MARK: - UITextField
@@ -192,3 +267,23 @@ extension UIView {
         return view
     }
 }
+
+
+extension UIImageView {
+    func createIcon(dimension: CGFloat, imageName: String) -> UIImageView {
+        let imgView = UIImageView()
+        imgView.clipsToBounds = true
+        
+        if imageName == "" {
+            imgView.backgroundColor = .red
+        } else {
+            imgView.image = UIImage(named: imageName)
+        }
+       
+        imgView.layer.cornerRadius = dimension / 2
+        imgView.setDimensions(width: dimension, height: dimension)
+        imgView.backgroundColor = .red
+        return imgView
+    }
+}
+

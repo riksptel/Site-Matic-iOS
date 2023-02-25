@@ -112,9 +112,4 @@ extension VehicleAlertsController: UITableViewDataSource {
         cell.selectionStyle = .none
         return cell
     }
-    
- 
-    
-    
-    
 }

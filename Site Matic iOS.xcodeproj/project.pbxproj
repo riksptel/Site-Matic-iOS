@@ -18,7 +18,6 @@
 		F519D647299CB578004EF2AA /* ContainerViewComposer.swift in Sources */ = {isa = PBXBuildFile; fileRef = F519D646299CB578004EF2AA /* ContainerViewComposer.swift */; };
 		F532BEF12998CA850071A1EF /* VehicleDetailsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F532BEF02998CA850071A1EF /* VehicleDetailsCell.swift */; };
 		F558A20C29975BFC002982D1 /* SiteOverviewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F558A20B29975BFB002982D1 /* SiteOverviewController.swift */; };
-		F5794229299A17B300F3CCB1 /* DemoController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5794228299A17B300F3CCB1 /* DemoController.swift */; };
 		F5833C2629A537AE004B18C3 /* DashboardController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5833C2529A537AE004B18C3 /* DashboardController.swift */; };
 		F5833C2829A53B45004B18C3 /* ChartsViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5833C2729A53B45004B18C3 /* ChartsViewCell.swift */; };
 		F5B022EF2996447900150534 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5B022EE2996447900150534 /* AppDelegate.swift */; };
@@ -45,7 +44,6 @@
 		F519D646299CB578004EF2AA /* ContainerViewComposer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContainerViewComposer.swift; sourceTree = "<group>"; };
 		F532BEF02998CA850071A1EF /* VehicleDetailsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VehicleDetailsCell.swift; sourceTree = "<group>"; };
 		F558A20B29975BFB002982D1 /* SiteOverviewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SiteOverviewController.swift; sourceTree = "<group>"; };
-		F5794228299A17B300F3CCB1 /* DemoController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DemoController.swift; sourceTree = "<group>"; };
 		F5833C2529A537AE004B18C3 /* DashboardController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardController.swift; sourceTree = "<group>"; };
 		F5833C2729A53B45004B18C3 /* ChartsViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartsViewCell.swift; sourceTree = "<group>"; };
 		F5B022EB2996447900150534 /* Site Matic iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Site Matic iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -156,7 +154,6 @@
 				F5B022F02996447900150534 /* SceneDelegate.swift */,
 				F5B022F22996447900150534 /* LoginController.swift */,
 				F558A20B29975BFB002982D1 /* SiteOverviewController.swift */,
-				F5794228299A17B300F3CCB1 /* DemoController.swift */,
 				F5DDFB092998BA30009883C0 /* VehicleAlertsController.swift */,
 				F532BEF02998CA850071A1EF /* VehicleDetailsCell.swift */,
 				F5833C2729A53B45004B18C3 /* ChartsViewCell.swift */,
@@ -295,7 +292,6 @@
 				F5BF522D29A722C90021B059 /* ProfileViewController.swift in Sources */,
 				F519D641299CB51F004EF2AA /* ContainerViewController.swift in Sources */,
 				F5E1D77D299658D3003E72BA /* Extensions.swift in Sources */,
-				F5794229299A17B300F3CCB1 /* DemoController.swift in Sources */,
 				F519D634299CB469004EF2AA /* SideMenuViewController.swift in Sources */,
 				F5833C2629A537AE004B18C3 /* DashboardController.swift in Sources */,
 				F519D63F299CB4F5004EF2AA /* ContainerViewControllerPresentation.swift in Sources */,
