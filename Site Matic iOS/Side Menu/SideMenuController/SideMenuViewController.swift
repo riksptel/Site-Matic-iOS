@@ -7,9 +7,9 @@
 
 import UIKit
 
-final class SideMenuViewController: UIViewController {
+class SideMenuViewController: UIViewController {
     
-    private let employeeNameLabel: UILabel = {
+    let employeeNameLabel: UILabel = {
         let label = UILabel()
         label.text = "Employee Name"
         label.textColor = .white
@@ -17,7 +17,7 @@ final class SideMenuViewController: UIViewController {
         return label
     }()
     
-    private let employeeEmailLabel: UILabel = {
+    let employeeEmailLabel: UILabel = {
         let label = UILabel()
         label.text = "xyz@gmail.com"
         label.textColor = .white
@@ -25,7 +25,7 @@ final class SideMenuViewController: UIViewController {
         return label
     }()
     
-    private let employeeDepartmentLabel: UILabel = {
+    let employeeDepartmentLabel: UILabel = {
         let label = UILabel()
         label.text = "Department"
         label.textColor = .white
@@ -34,7 +34,7 @@ final class SideMenuViewController: UIViewController {
     }()
     
     
-    private let userIcon: UIImageView = {
+    let userIcon: UIImageView = {
         let userIcon = UIImageView()
         userIcon.clipsToBounds = true
         userIcon.setDimensions(width: 50, height: 50)
@@ -44,7 +44,7 @@ final class SideMenuViewController: UIViewController {
         return userIcon
     }()
 
-    private lazy var headerView: UIView = {
+    lazy var headerView: UIView = {
         let view = UIView()
 
         view.addSubview(userIcon)
@@ -55,7 +55,7 @@ final class SideMenuViewController: UIViewController {
         stackView.axis = .vertical
         view.addSubview(stackView)
         stackView.anchor(left: userIcon.rightAnchor, bottom: view.bottomAnchor, right: view.rightAnchor, paddingLeft: 15, paddingBottom: 15, paddingRight: 15, height: 50)
-        
+        view.translatesAutoresizingMaskIntoConstraints = false
         return view
     }()
     

@@ -24,7 +24,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 //            window?.rootViewController = UINavigationController(rootViewController: VehicleAlertsController())
         
 //Charts view
-                window?.rootViewController = UINavigationController(rootViewController: DashboardController())
+//                window?.rootViewController = UINavigationController(rootViewController: DashboardController())
 
 //Side menu
         let container = ContainerViewComposer.makeContainer()

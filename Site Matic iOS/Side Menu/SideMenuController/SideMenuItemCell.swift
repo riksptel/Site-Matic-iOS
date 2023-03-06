@@ -17,14 +17,15 @@ final class SideMenuItemCell: UITableViewCell {
         let imageView = UIImageView()
         imageView.backgroundColor = .red
         imageView.translatesAutoresizingMaskIntoConstraints = false
-        imageView.layer.cornerRadius = 25 / 2
+        imageView.layer.cornerRadius = 40 / 2
         return imageView
     }()
 
     private var itemLabel: UILabel = {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
-        label.font = UIFont.systemFont(ofSize: 10)
+        label.font = UIFont.systemFont(ofSize: 14)
+        label.numberOfLines = 0
         return label
     }()
 
@@ -51,12 +52,12 @@ final class SideMenuItemCell: UITableViewCell {
 
     private func configureConstraints() {
         itemIcon.centerYAnchor.constraint(equalTo: contentView.centerYAnchor).isActive = true
-        itemIcon.widthAnchor.constraint(equalToConstant: 25).isActive = true
-        itemIcon.heightAnchor.constraint(equalToConstant: 25).isActive = true
+        itemIcon.widthAnchor.constraint(equalToConstant: 40).isActive = true
+        itemIcon.heightAnchor.constraint(equalToConstant: 40).isActive = true
         itemIcon.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 22).isActive = true
 
         itemLabel.centerYAnchor.constraint(equalTo: contentView.centerYAnchor).isActive = true
-        itemLabel.leadingAnchor.constraint(equalTo: itemIcon.trailingAnchor, constant: 20).isActive = true
+        itemLabel.leadingAnchor.constraint(equalTo: itemIcon.trailingAnchor, constant: 10).isActive = true
         itemLabel.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -22).isActive = true
     }
 
