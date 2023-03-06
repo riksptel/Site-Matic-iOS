@@ -19,9 +19,16 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         guard let windowScene = (scene as? UIWindowScene) else { return }
         window = UIWindow(windowScene: windowScene)
         window?.makeKeyAndVisible()
-        window?.rootViewController = UINavigationController(rootViewController: DashboardController())
-//        let container = ContainerViewComposer.makeContainer()
-//        window?.rootViewController = container
+        window?.rootViewController = UINavigationController(rootViewController: LoginController())
+//vehicle details
+//            window?.rootViewController = UINavigationController(rootViewController: VehicleAlertsController())
+        
+//Charts view
+                window?.rootViewController = UINavigationController(rootViewController: DashboardController())
+
+//Side menu
+        let container = ContainerViewComposer.makeContainer()
+        window?.rootViewController = container
         
     }
 

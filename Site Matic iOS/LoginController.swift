@@ -63,7 +63,7 @@ class LoginController: UIViewController {
         button.setImage(image, for: .normal)
         button.layer.borderWidth = 4.0
         button.layer.borderColor = UIColor.rgb(red: 63, green: 63, blue: 62).cgColor
-        button.addTarget(LoginController.self, action: #selector(performAuth), for: .touchUpInside)
+        button.addTarget(self, action: #selector(performAuth), for: .touchUpInside)
         return button
     }()
     
