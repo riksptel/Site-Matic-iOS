@@ -27,8 +27,8 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 //                window?.rootViewController = UINavigationController(rootViewController: DashboardController())
 
 //Side menu
-        let container = ContainerViewComposer.makeContainer()
-        window?.rootViewController = container
+//        let container = ContainerViewComposer.makeContainer()
+//        window?.rootViewController = container
         
     }
 
